@@ -8,16 +8,21 @@ namespace Test
 {
     class Product
     {
+        public Product(string Type)
+        {
+            this.Type = Type;
+        }
+
         public string Type;
         public float Price;
-        public int Mass;
-        public bool Fragile;
+        private bool DelivPoss;
+        private int Mass;
+        private bool Fragile;
+        private int MassLimit = 10;
 
-        public bool DeliveryPoss(int SignifMass, bool SignifFragility, int WeightLimit)
+        public bool PossibilitCheck()
         {
-            bool DelivPoss;
-
-            if (SignifMass > WeightLimit && SignifFragility)
+            if (Mass > MassLimit && Fragile)
                 DelivPoss = false;
 
             else
@@ -25,5 +30,18 @@ namespace Test
 
             return DelivPoss;
         }
+
+        public void PrintInfo()
+        {
+            Console.WriteLine("Наименование: " + Type);
+            Console.WriteLine("Стоимость: ");
+            Console.WriteLine();
+
+
+        
+        
+        }
+        
+
     }
 }
