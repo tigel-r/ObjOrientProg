@@ -22,9 +22,14 @@ namespace Test
 
     internal class Program
     {
-
         static void Main(string[] args)
         {
+            Product Pro = new Product("товар ");
+
+            Pro.PrintInfo();
+
+
+
           
 
 
@@ -32,6 +37,5 @@ namespace Test
 
 
         }
-
     }
 }
